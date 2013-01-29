@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/nathan7/objzip.png)](https://travis-ci.org/nathan7/objzip)
+
 objzip
 ======
 objzip zips together keys and values into objects.
