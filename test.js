@@ -35,10 +35,10 @@ describe('objzip', function() {
   })
 
   it('should set the object prototype to null', function() {
-    expect(Object.getPrototypeOf(objzip( ['a', 'b', 'c']
-                                       , ['d', 'e', 'f']
-                                       ))
-    ).to.equal(null)
+    expect(objzip( ['a', 'b', 'c']
+                 , ['d', 'e', 'f']
+                 )
+    ).to.not.have.property('hasOwnProperty')
   })
 })
 
@@ -65,10 +65,10 @@ describe('objzip.sparse', function() {
   })
 
   it('should set the object prototype to null', function() {
-    expect(Object.getPrototypeOf(objzip.sparse( ['a', 'b', 'c']
-                                              , ['d', 'e', 'f']
-                                              ))
-    ).to.equal(null)
+    expect(objzip.sparse( ['a', 'b', 'c']
+                        , ['d', 'e', 'f']
+                        )
+    ).to.not.have.property('hasOwnProperty')
   })
 })
 
@@ -95,10 +95,10 @@ describe('objzip.sparseKeys', function() {
   })
 
   it('should set the object prototype to null', function() {
-    expect(Object.getPrototypeOf(objzip.sparseKeys( ['a', 'b', 'c']
-                                                  , ['d', 'e', 'f']
-                                                  ))
-    ).to.equal(null)
+    expect(objzip.sparseKeys( ['a', 'b', 'c']
+                            , ['d', 'e', 'f']
+                            )
+    ).to.not.have.property('hasOwnProperty')
   })
 })
 
@@ -127,9 +127,9 @@ describe('objzip.sparseValues', function() {
   })
 
   it('should set the object prototype to null', function() {
-    expect(Object.getPrototypeOf(objzip.sparseValues( ['a', 'b', 'c']
-                                                    , ['d', 'e', 'f']
-                                                    ))
-    ).to.equal(null)
+    expect(objzip.sparseValues( ['a', 'b', 'c']
+                              , ['d', 'e', 'f']
+                              )
+    ).to.not.have.property('hasOwnProperty')
   })
 })
