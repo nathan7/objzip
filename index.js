@@ -9,26 +9,29 @@ function objzip(keys, values, obj) {
 
 objzip.sparse =
 function objzipSparse(keys, values, obj) {
-  return objzip( keys.filter(function(key, i) { return key != null && values[i] != null })
-               , values.filter(function(value, i) { return value != null && keys[i] != null })
-               , obj
-               )
+  if (obj == null) obj = makeObj()
+  for (var i = 0, len = Math.min(keys.length, values.length); i < len; i++)
+    if (keys[i] != null && values[i] != null)
+      obj[keys[i]] = values[i]
+  return obj
 }
 
 objzip.sparseValues =
 function objzipSparseValues(keys, values, obj) {
-  return objzip( keys.filter(function(_, i) { return values[i] != null })
-               , values.filter(function(value, i) { return value != null })
-               , obj
-               )
+  if (obj == null) obj = makeObj()
+  for (var i = 0, len = Math.min(keys.length, values.length); i < len; i++)
+    if (values[i] != null)
+      obj[keys[i]] = values[i]
+  return obj
 }
 
 objzip.sparseKeys =
 function objzipSparseKeys(keys, values, obj) {
-  return objzip( keys.filter(function(key) { return key != null })
-               , values.filter(function(_, i) { return keys[i] != null })
-               , obj
-               )
+  if (obj == null) obj = makeObj()
+  for (var i = 0, len = Math.min(keys.length, values.length); i < len; i++)
+    if (keys[i] != null && values[i] != null)
+      obj[keys[i]] = values[i]
+  return obj
 }
 
 var makeObj = function() {
