@@ -33,13 +33,6 @@ describe('objzip', function() {
                  )
     ).to.deep.equal(obj)
   })
-
-  it('should set the object prototype to null', function() {
-    expect(objzip( ['a', 'b', 'c']
-                 , ['d', 'e', 'f']
-                 )
-    ).to.not.have.property('hasOwnProperty')
-  })
 })
 
 describe('objzip.sparse', function() {
@@ -63,13 +56,6 @@ describe('objzip.sparse', function() {
                         )
     ).to.deep.equal({ a: 'd', c: 'f' })
   })
-
-  it('should set the object prototype to null', function() {
-    expect(objzip.sparse( ['a', 'b', 'c']
-                        , ['d', 'e', 'f']
-                        )
-    ).to.not.have.property('hasOwnProperty')
-  })
 })
 
 describe('objzip.sparseKeys', function() {
@@ -92,13 +78,6 @@ describe('objzip.sparseKeys', function() {
                         , ['d', null, 'f']
                         )
     ).to.deep.equal({ a: 'd', c: 'f' })
-  })
-
-  it('should set the object prototype to null', function() {
-    expect(objzip.sparseKeys( ['a', 'b', 'c']
-                            , ['d', 'e', 'f']
-                            )
-    ).to.not.have.property('hasOwnProperty')
   })
 })
 
@@ -124,12 +103,5 @@ describe('objzip.sparseValues', function() {
                         , ['d', null, 'f']
                         )
     ).to.deep.equal({ a: 'd', c: 'f' })
-  })
-
-  it('should set the object prototype to null', function() {
-    expect(objzip.sparseValues( ['a', 'b', 'c']
-                              , ['d', 'e', 'f']
-                              )
-    ).to.not.have.property('hasOwnProperty')
   })
 })
