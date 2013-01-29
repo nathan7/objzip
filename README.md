@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/nathan7/objzip.png)](https://travis-ci.org/nathan7/objzip)
+
 [![browser support](http://ci.testling.com/nathan7/objzip.png)](http://ci.testling.com/nathan7/objzip)
 
 objzip
