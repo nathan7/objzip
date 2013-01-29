@@ -1,0 +1,13 @@
+{
+  "name": "objzip",
+  "repo": "nathan7/objzip",
+  "description": "zip keys and values together into objects.",
+  "version": "1.0.0",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "scripts": [
+    "index.js"
+  ]
+}
