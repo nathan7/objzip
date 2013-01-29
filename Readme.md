@@ -10,7 +10,7 @@ example: ``objzip(['a', 'b', 'c'], ['d', 'e', 'f'])`` -> ``{ a: 'd', b: 'e', c: 
 objzip(keys, values, obj)
 -------------------------
 For each ``(key, value)`` pair, assign ``value`` to ``obj[key]``.
-``obj`` defaults to a fresh object with its prototype set to null whenever possible (``Object.create(null)`` or as close as possible)
+``obj`` defaults to a fresh object.
 
 objzip.sparse(keys, values, obj)
 --------------------------------
